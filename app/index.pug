@@ -1,0 +1,156 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Document
+        link(rel="stylesheet" href="css/style.min.css")
+        link(rel="shortcut icon" href="images/favicon.ico" type="image.png")
+
+    body
+        .wrapper
+            .content
+                .main
+                    .main__inner.active
+                        .main__form
+                            .main__form-title Calendar
+                            .main__form-btns
+                                fieldset
+                                    .select
+                                        select(name="member").main__form-member
+                                            option(value="All") All members
+                                            option(value="Maria") Maria
+                                            option(value="Bob") Bob
+                                            option(value="Alex") Alex
+                                    button.main__form-event New event +
+                        table.main__table
+                            tr
+                                th Name
+                                th Mon
+                                th Tue
+                                th Wed
+                                th Thu
+                                th Fri
+                            tr
+                                td 10:00
+                                td(data-mon="10")
+                                td(data-tue="10")
+                                td(data-wed="10")
+                                td(data-thu="10")
+                                td(data-fri="10")
+                            tr
+                                td 11:00
+                                td(data-mon="11")
+                                td(data-tue="11")
+                                td(data-wed="11")
+                                td(data-thu="11")
+                                td(data-fri="11")
+                            tr
+                                td 12:00
+                                td(data-mon="12")
+                                td(data-tue="12")
+                                td(data-wed="12")
+                                td(data-thu="12")
+                                td(data-fri="12")
+                            tr
+                                td 13:00
+                                td(data-mon="13")
+                                td(data-tue="13")
+                                td(data-wed="13")
+                                td(data-thu="13")
+                                td(data-fri="13")
+                            tr
+                                td 14:00
+                                td(data-mon="14")
+                                td(data-tue="14")
+                                td(data-wed="14")
+                                td(data-thu="14")
+                                td(data-fri="14")
+                            tr
+                                td 15:00
+                                td(data-mon="15")
+                                td(data-tue="15")
+                                td(data-wed="15")
+                                td(data-thu="15")
+                                td(data-fri="15")
+                            tr
+                                td 16:00
+                                td(data-mon="16")
+                                td(data-tue="16")
+                                td(data-wed="16")
+                                td(data-thu="16")
+                                td(data-fri="16")
+                            tr
+                                td 17:00
+                                td(data-mon="17")
+                                td(data-tue="17")
+                                td(data-wed="17")
+                                td(data-thu="17")
+                                td(data-fri="17")
+                            tr
+                                td 18:00
+                                td(data-mon="18")
+                                td(data-tue="18")
+                                td(data-wed="18")
+                                td(data-thu="18")
+                                td(data-fri="18")
+                    .delete
+                        .delete__title Are you sure you want to delete 
+                            span.delete__title-value
+                            | event?
+                        .delete__btns
+                            button.delete__no No
+                            button.delete__yes Yes
+                    section.event
+                        form.event__form
+                            fieldset
+                                .event__error
+                                    img.event__warning(src="images/warning.svg" alt="warning icon")
+                                    p Failed to create an event. Time slot is alredy booked.
+                                    img.event__close(src="images/close.svg" alt="close icon")
+                                .event__inputs
+                                    label(for="descr") Name of the event:
+                                    input.event__descr(type="text" name="descr")
+                                    label(for="person") Participiants:
+                                    .select.event__select
+                                        select.event__name(name="person")
+                                            option(value="All") Maria, Bob, Alex
+                                            option(value="Maria") Maria
+                                            option(value="Bob") Bob
+                                            option(value="Alex") Alex
+                                    label(for="day") Day:
+                                    .select.event__select
+                                        select.event__day(name="day")
+                                            option(value="mon") Monday
+                                            option(value="tue") Tuesday
+                                            option(value="wed") Wednesday
+                                            option(value="thu") Thursday
+                                            option(value="fri") Friday
+                                    label(for="time") Time:
+                                    .select.event__select
+                                        select.event__time(name="time")
+                                            option(value="10") 10:00
+                                            option(value="11") 11:00
+                                            option(value="12") 12:00
+                                            option(value="13") 13:00
+                                            option(value="14") 14:00
+                                            option(value="15") 15:00
+                                            option(value="16") 16:00
+                                            option(value="17") 17:00
+                                            option(value="18") 18:00
+                                .event__btns
+                                    button.event__btn.event__cancel Cancel
+                                    button.event__btn.event__create Create
+
+
+
+
+
+
+
+
+            .footer
+        script(src="js/jquery.js")
+        script(src="js/libs.min.js")
+        script(src="js/main.js")

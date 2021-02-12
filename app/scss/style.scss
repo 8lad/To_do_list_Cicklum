@@ -1,0 +1,211 @@
+@import 'global';
+@import 'fonts';
+@import 'media';
+// start main section
+.main {
+    display: block;
+    padding: 40px 40px 0;
+    &__inner {
+        display: none;
+    }
+    &__form {
+        fieldset {
+            border: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__form-title {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &__form-btns {
+        font-size: 21px;
+    }
+    &__form-event {
+        margin-left: 20px;
+        padding: 7px 20px;
+        border-radius: 10px;
+        border: 2px solid #000;
+        outline: none;
+    }
+    &__form-member {
+        border: 2px solid #000;
+        border-radius: 10px;
+        padding: 8px 55px 8px 15px;
+        outline: none;
+    }
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid #C6C5C5;
+        table-layout: fixed;
+        th {
+            background-color: #e5e5e5;
+        }
+        td,
+        th {
+            width: 15%;
+            height: 70px;
+            border: 2px solid #C6C5C5;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+    &__table-box {
+        background-color: #D3F5B4;
+        width: 100%;
+        height: 100%;
+        padding: 5px 25px 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        word-wrap: break-word;
+        overflow: hidden;
+        img {
+            max-width: 12px;
+            position: absolute;
+            right: 9px;
+            cursor: pointer;
+            z-index: 3;
+        }
+    }
+}
+
+.filled {
+    visibility: visible;
+}
+
+.menu__table-box--hidden {
+    visibility: hidden;
+}
+
+.main__inner.active {
+    display: block;
+}
+
+// end main section
+// start delete modal
+.delete {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    text-align: center;
+    max-width: 320px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #E6E6E6;
+    padding: 20px 10px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__no,
+    &__yes {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: none;
+        width: 49%;
+        padding: 7px 10px;
+        outline: none;
+    }
+}
+
+.delete.active {
+    display: block;
+}
+
+// end delete modal
+// start event section
+.event {
+    display: none;
+    width: 100%;
+    fieldset {
+        border: none;
+        padding-top: 50px;
+    }
+    &__inputs {
+        width: 50%;
+        margin-left: 0;
+        margin-right: auto;
+        label,
+        input {
+            width: 49%;
+            display: inline-block;
+            margin-bottom: 22px;
+        }
+        input,
+        select {
+            padding: 9px 7px;
+            border: 2px solid #000;
+            border-radius: 7px;
+            outline: none;
+        }
+    }
+    .select {
+        width: 49%;
+        margin-bottom: 22px;
+        display: inline-block;
+        &::before {
+            border-radius: 0 7px 7px 0;
+        }
+        select {
+            width: 100%;
+        }
+    }
+    &__btns {
+        width: 50%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    &__btn {
+        display: inline-block;
+        padding: 10px 40px;
+        outline: none;
+        margin-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #000;
+    }
+    &__error {
+        visibility: hidden;
+        height: 0;
+        background-color: #EEE0DE;
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        p {
+            margin-left: 20px;
+        }
+    }
+    &__close {
+        margin-right: 0;
+        margin-left: auto;
+    }
+    &__warning {
+        max-width: 30px;
+    }
+}
+
+.event.active {
+    display: block;
+}
+
+.event__error.active {
+    visibility: visible;
+    height: fit-content;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+
+// end event section
