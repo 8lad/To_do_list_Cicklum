@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // Selecting tasks by name of participians
+    // Selecting tasks by name of participans
 
     selectTasks.addEventListener('change', () => {
         filledBoxes = mainSection.querySelectorAll('.filled');
